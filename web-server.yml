@@ -1,0 +1,6 @@
+---
+- hosts: web-server
+  sudo: yes
+  roles:
+    - httpd
+#    - php

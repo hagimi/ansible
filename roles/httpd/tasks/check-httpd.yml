@@ -1,0 +1,5 @@
+- name: copy index.html
+  copy: src=index.html dest=/var/www/html
+
+- name: check httpd is working
+  uri: url=http://192.168.33.10/

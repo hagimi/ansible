@@ -1,0 +1,2 @@
+- name: copy sample-project.conf
+  copy: src=sample-project.conf dest=/etc/httpd/conf.d/

@@ -1,0 +1,2 @@
+---
+- include: python_setup.yml tags=python

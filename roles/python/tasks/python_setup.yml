@@ -1,0 +1,8 @@
+- name: be sure python-setuptools is installed
+  yum: pkg=python-setuptools state=installed
+
+- name: install easy_install package
+  easy_install: name=pip
+
+- name: install pip package
+  pip: name=httplib2

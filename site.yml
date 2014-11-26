@@ -1,0 +1,4 @@
+---
+- include: common.yml
+- include: web-server.yml
+#- include: db-server.yml

@@ -1,0 +1,20 @@
+---
+- name: be sure php is installed
+  yum: name={{item}} state=installed enablerepo=epel
+  with_items:
+    - "{{ packages }}"
+  notify:
+    - restart httpd
+
+- name: copy info.php
+  copy: src=info.php dest=/var/www/html
+
+- name: set timezone in php.ini
+  lineinfile: >
+    dest=/etc/php.ini
+    regexp='^;?date.timezone ='
+    line='date.timezone = Asia/Tokyo'
+    owner=root
+    group=root
+    mode=0644
+  notify: restart httpd

@@ -1,5 +1,3 @@
-- name: be sure common packages are installed
-  yum: name={{ item }} state=installed
-  with_items:
-  - "{{ packages }}"
-  tags: common
+---
+- include: repos.yml tags=common
+- include: install.yml tags=common

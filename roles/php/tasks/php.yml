@@ -1,6 +1,6 @@
 ---
 - name: be sure php is installed
-  yum: name={{item}} state=installed enablerepo=epel
+  yum: name={{item}} state=installed enablerepo=remi
   with_items:
     - "{{ packages }}"
   notify:
